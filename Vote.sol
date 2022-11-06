@@ -1,9 +1,11 @@
 pragma solidity >= 0.8.0;
 
-enum Decision {ACCEPT, DENY, ABSTAIN}
+
 
 contract poll{
 
+    enum Decision {ACCEPT, DENY, ABSTAIN}
+    
     struct Voter{
         address voterID;
         string voterName;
