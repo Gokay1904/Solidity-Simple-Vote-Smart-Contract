@@ -111,7 +111,7 @@ contract poll{
             updateResults();
     }
 
-    function Increase_VoteWeight(address _voterID) public payable checkPollStatus() //TO INVALIDATE SUSPICIOUS VOTES
+    function Increase_VoteWeight(address _voterID) public payable checkPollStatus() //INCREASE VOTE WEIGHT IF VOTER SENDS MORE VALUE
     {   
         uint limitPrice = 1; //Limit price to increase voteWeight
         require(Voters_byaddress[msg.sender].voterID == _voterID, "There is any ID related in that poll");
