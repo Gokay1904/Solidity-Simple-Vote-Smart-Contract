@@ -23,7 +23,7 @@ contract poll{
     uint private deniers;
     uint private abstains;
 
-    enum VotingState {CLOSED, INWAIT, OPENED}
+    enum VotingState {CLOSED, AWAITING, OPENED}
    
     VotingState private currentState;
 
