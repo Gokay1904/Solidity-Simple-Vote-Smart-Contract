@@ -114,7 +114,7 @@ contract poll{
     function Increase_VoteWeight(address _voterID) public payable checkPollStatus() //INCREASE VOTE WEIGHT IF VOTER SENDS MORE VALUE
     {   
         uint limitPrice = 1; //Limit price to increase voteWeight
-        require(Voters_byaddress[msg.sender].voterID == _voterID, "There is any ID related in that poll");
+        require(Voters_byaddress[msg.sender].voterID == _voterID, "There isn't any ID related");
         if(msg.value > limitPrice)
         {
             Voters_byaddress[msg.sender].voteWeight += 1;
